@@ -1,0 +1,23 @@
+{
+  "name": "discord_chatbot",
+  "version": "1.0.0",
+  "description": "Google Search Chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parasnagpal/discord_chatbot.git"
+  },
+  "author": "Paras Nagpal",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/parasnagpal/discord_chatbot/issues"
+  },
+  "homepage": "https://github.com/parasnagpal/discord_chatbot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  }
+}
