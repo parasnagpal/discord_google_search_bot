@@ -8,7 +8,10 @@ client.on('ready',()=>{
 })
 
 client.on('message',msg=>{
-    console.log(msg);
+    if(msg.content.startsWith('!google')){
+        let str=msg.content.slice(7).trim();
+        msg.reply("Searching for:"+str);
+    }
 })
 
 client.login(process.env.DISCORD_TOKEN)
