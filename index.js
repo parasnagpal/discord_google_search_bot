@@ -97,10 +97,10 @@ function return_search_result(search_data){
 
 function return_recent_searches(string_array){
     let display=[];
-    string_array.map((result)=>{
+    string_array.map((result,index)=>{
         display.push({
-            name:result.searchString,
-            value:"\u200b",
+            name:index+1,
+            value:result.searchString,
         })
     })
     return display
