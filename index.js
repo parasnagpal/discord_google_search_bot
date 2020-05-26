@@ -17,7 +17,6 @@ client.on('message',msg=>{
             .setColor('#000fff')
 	        .setTitle("Search results for:"+str)
 	        .setURL('https://google.com/')
-	        .setDescription('Search completed')
 	        .addFields(
                 ...return_search_result(search.data.items)
 	        )
