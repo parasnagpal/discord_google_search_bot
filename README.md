@@ -27,20 +27,20 @@ Node.JS ^12.x.x
 
 ### Deployment
 
-Follow these steps to deploy this on your local machine: \
-    1. Clone or download the zip file of the repository to your machine. \
-    2. Run *npm i* in the root of the directory. \
-    3. Create a .env file in the root of the directory.\ 
-    4. Add these environment variables to .env file. \
-        -   *DISCORD_TOKEN* \
+Follow these steps to deploy this on your local machine: <br/>
+    1. Clone or download the zip file of the repository to your machine. <br/>
+    2. Run *npm i* in the root of the directory. <br/>
+    3. Create a .env file in the root of the directory.<br/>
+    4. Add these environment variables to .env file. <br/>
+        -   *DISCORD_TOKEN* <br/>
             A step by step procedure to setup a discord bot can be found [here](https://discord.com/developers/docs/topics/oauth2#bots)
-            You can get DISCORD_TOKEN from https://discord.com/developers/applications/CLIENT_ID/bot \
-        -   *GOOGLE_SEARCH_ENGINE_ID* \
-            - Create a Google Custom Search Engine. A step by step guide can be found [here](https://developers.google.com/custom-search/v1/introduction)* \
-            - Do not add any websites to search. Just Make sure *Search the entire web* is selected. \
-            - Get this from [here](https://cse.google.com/cse/all) \      
-        - *GOOGLE_CUSTOM_SEARCH_API_KEY* \
-            This can be found [here](https://developers.google.com/custom-search/v1/introduction) \   
+            You can get DISCORD_TOKEN from https://discord.com/developers/applications/CLIENT_ID/bot <br/>
+        -   *GOOGLE_SEARCH_ENGINE_ID* <br/>
+            - Create a Google Custom Search Engine. A step by step guide can be found [here](https://developers.google.com/custom-search/v1/introduction)* <br/>
+            - Do not add any websites to search. Just Make sure *Search the entire web* is selected. <br/>
+            - Get this from [here](https://cse.google.com/cse/all) <br/>      
+        - *GOOGLE_CUSTOM_SEARCH_API_KEY* <br/>
+            This can be found [here](https://developers.google.com/custom-search/v1/introduction) <br/>   
 
 ## Authors
 
