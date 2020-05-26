@@ -21,15 +21,8 @@ client.on('message',msg=>{
         //Axios request to Google Custom Search API
         axios.get(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_CUSTOM_SEARCH_API_KEY}&cx=${process.env.GOOGLE_SEARCH_ENGINE_ID}&q=${str}`)
         .then((search)=>{
-            //create a new object of MessageEmbed and set properties
-            const cse_embed= new Discord.MessageEmbed()
-            .setColor('#000fff')
-	        .setTitle("Search results for:"+str)
-	        .setURL('https://google.com/')
-	        .addFields(
-                ...return_search_result(search.data.items)
-	        )
-            msg.channel.send(cse_embed)
+            const search_embed=embed_layout("Search results for:"+str,return_search_result(search.data.items));
+            msg.channel.send(search_embed)
         })
         .catch(e=>{
             //log any error during Google CSE request
@@ -40,21 +33,27 @@ client.on('message',msg=>{
     }
     if(msg.content.startsWith('!recent')){
         let str=msg.content.slice(7).trim();
-        function recent(){
-            let recentSearches=strings_like(str);
-            const cse_embed= new Discord.MessageEmbed()
-            .setColor('#000fff')
-	        .setTitle("Past results like:"+str)
-	        .setURL('https://google.com/')
-	        .addFields(
-                ...return_recent_searches(recentSearches)
-	        )
-            msg.channel.send(cse_embed)
+        async function recent(){
+            let recentSearches= await strings_like(str);
+            const recent_embed=embed_layout("Past results like:"+str,return_recent_searches(recentSearches));
+            msg.channel.send(recent_embed);
         }
         recent()
     }
 
 })
+
+function embed_layout(title,fields_array){
+    //create a new object of MessageEmbed and set properties
+    const embed= new Discord.MessageEmbed()
+        .setColor('#000fff')
+	    .setTitle(title)
+	    .setURL('https://google.com/')
+	    .addFields(
+            ...fields_array
+        )
+    return embed    
+}
 
 function return_search_result(search_data){
     let cropped_data=search_data.slice(0,5);
