@@ -2,6 +2,28 @@ const Discord = require('discord.js');
 require('dotenv').config()
 const client = new Discord.Client(); 
 const axios= require('axios');
+const {Sequelize,DataTypes} =require('sequelize')
+const sequelize=new Sequelize({
+    dialect:'sqlite',
+    storage:'./assets/database/database.sqlite'
+})
+
+async function database(){
+try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+
+  const searches=sequelize.define('Searches',{
+      searchString:{
+          type:DataTypes.STRING,
+      }
+  });
+  
+}
+database()
 
 //Login handle
 client.on('ready',()=>{
