@@ -71,10 +71,10 @@ client.on('message',msg=>{
             })
             const cse_embed= new Discord.MessageEmbed()
             .setColor('#000fff')
-	        .setTitle("Search results for:"+str)
+	        .setTitle("Past results like:"+str)
 	        .setURL('https://google.com/')
 	        .addFields(
-                ...recentSearches
+                ...return_recent_searches(recentSearches)
 	        )
             msg.channel.send(cse_embed)
         }
@@ -93,6 +93,17 @@ function return_search_result(search_data){
         }) 
     });
     return display;              
+}
+
+function return_recent_searches(string_array){
+    let display=[];
+    string_array.map((result)=>{
+        display.push({
+            name:result.searchString,
+            value:"\u200b",
+        })
+    })
+    return display
 }
 
 client.login(process.env.DISCORD_TOKEN)
