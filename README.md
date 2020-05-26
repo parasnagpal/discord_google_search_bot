@@ -32,14 +32,14 @@ Follow these steps to deploy this on your local machine:\
     2. Run *npm i* in the root of the directory.\
     3. Create a .env file in the root of the directory.\ 
     4. Add these environment variables to .env file.\
-        * **DISCORD_TOKEN** \
+        -   *DISCORD_TOKEN* \
             A step by step procedure to setup a discord bot can be found [here](https://discord.com/developers/docs/topics/oauth2#bots)
             You can get DISCORD_TOKEN from https://discord.com/developers/applications/CLIENT_ID/bot\
-        * **GOOGLE_SEARCH_ENGINE_ID**\
-            * Create a Google Custom Search Engine. A step by step guide can be found [here](https://developers.google.com/custom-search/v1/introduction)*\
-            * Do not add any websites to search. Just Make sure *Search the entire web* is selected.\
-            * Get this from [here](https://cse.google.com/cse/all)\      
-        * **GOOGLE_CUSTOM_SEARCH_API_KEY**\
+        -   *GOOGLE_SEARCH_ENGINE_ID*\
+            - Create a Google Custom Search Engine. A step by step guide can be found [here](https://developers.google.com/custom-search/v1/introduction)*\
+            - Do not add any websites to search. Just Make sure *Search the entire web* is selected.\
+            - Get this from [here](https://cse.google.com/cse/all)\      
+        - *GOOGLE_CUSTOM_SEARCH_API_KEY*\
             This can be found [here](https://developers.google.com/custom-search/v1/introduction)\   
 
 ## Authors
